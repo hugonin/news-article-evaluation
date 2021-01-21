@@ -10,7 +10,6 @@ const fetch = require('node-fetch');
 /* Global API Variables */
 const baseUrl = "https://api.meaningcloud.com/sentiment-2.1?key=";
 const API_KEY = process.env.API_KEY;
-let reqType = 'txt';
 
 const app = express()
 app.use(express.static('dist'))
@@ -26,7 +25,6 @@ app.use(bodyParser.urlencoded({
 
 console.log(__dirname)
 
-console.log(`Your API key is ${process.env.API_KEY}`);
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
