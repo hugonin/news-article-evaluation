@@ -6,10 +6,7 @@ function handleSubmit(event) {
 
     console.log("::: Form Submitted :::")
         postData('http://localhost:8081/add', {name: formText})
-        .then(res => {
-        return res.json()
-        })
-        .then(function(data) {
+        .then(function(res) {
             let element = document.getElementById('results');
             Client.updateUI(element, res);
         })

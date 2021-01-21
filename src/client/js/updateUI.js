@@ -1,11 +1,10 @@
 
-const updateUI = async (inputText) => {
-    console.log("::: Running updateUI :::", inputText);
+const updateUI = async (element,data) => {
+    console.log("::: Running updateUI :::", data);
+    console.log("::: Running updateUI :::", element);
   
-    const request = await fetch('/add');
     try{
-        const allData = await request.json();
-        document.getElementById('results').innerHTML = `<strong>Confidence: </strong>${data.confidence}<br>
+        element.innerHTML = `<strong>Confidence: </strong>${data.confidence}<br>
         <strong>Score tag: </strong>${data.score_tag}<br>
         <strong>Subjectivity: </strong>${data.subjectivity}<br>
         <strong>Irony: </strong>${data.irony}`
@@ -14,8 +13,6 @@ const updateUI = async (inputText) => {
       console.log("error", error);
     }
   }
-
-
 
 export { updateUI };
 

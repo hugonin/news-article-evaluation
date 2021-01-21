@@ -37,10 +37,10 @@ app.get('/test', function (req, res) {
 
 // Post Route
 app.post('/add', async function(req, res) {
-    textInput = req.body.text;
+    textInput = req.body.name;
     console.log(`You entered: ${textInput}`);
    
-    const response = await fetch(baseUrl + `${API_KEY}&of=json&lang=auto&txt=${textInput}`)
+    const response = await fetch(baseUrl + `${API_KEY}&of=json&lang=en&url=${textInput}`)
     const data = await response.json()
     console.log(data)
     res.send(data)
