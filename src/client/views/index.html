@@ -5,40 +5,37 @@
         <title>Test</title>
         <link rel="stylesheet" href="/styles/resets.css">
         <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
         <link rel="stylesheet" href="/styles/form.css">
         <link rel="stylesheet" href="/styles/footer.css">
     </head>
 
     <body>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+        <div class="wrapper">
+            <h1>Evaluate a news article!</h1>
 
-        <main>
-            <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" placeholder="Text or URL">
-                    <input type="submit" name="" value="Analyze text" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-                </form>
-            </section>
+            <main>
+                <section class="left-col">
+                    <h2>Analyze Setup</h2>
+                    <form class="" onsubmit="return Client.handleSubmit(event)">
+                        <label for="input">URL</label>
+                        <input id="name" type="text" name="input" placeholder="Enter an URL">
+                        <input type="submit" class="cta"  value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    </form>
+                </section>
+    
+                <section class="right-col">
+                    <p><strong>Results:</strong></p>
+                    <div id="results"></div>
+                </section>
+            </main>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
+            <footer>
+                <p class="footer-fineprint">&copy; 2021 | Made with <span aria-label="love" role="image">&#128150;</span>by Hugonin</p>
+            </footer>
 
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-
+        </div>
+      
         <script>
             // Check that service workers are supported
             if ('serviceWorker' in navigator) {
