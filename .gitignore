@@ -2,3 +2,5 @@ node_modules
 dist
 .env  
 .env_sample
+npm-debug.log
+.DS_Store

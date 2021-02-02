@@ -11,6 +11,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node":"12.18.3"
+  },
   "description": "",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",

@@ -46,9 +46,15 @@ app.post('/add', async function(req, res) {
     res.send(data)
 });
 
+//Listen on the correct port for Heroku
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8081;
+}
+app.listen(port);
 
 // Setup Server
-const port = 8081;
+//const port = 8081;
 /* Spin up the server*/
 const server = app.listen(port, listening);
 
