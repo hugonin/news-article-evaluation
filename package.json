@@ -8,11 +8,14 @@
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
   },
-  "keywords": [],
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "",
   "license": "ISC",
   "engines": {
-    "node":"12.18.3"
+    "node": "15.11.0"
   },
   "description": "",
   "dependencies": {
